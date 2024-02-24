@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
         ports:
           - 5432:5432
 
-       options: >-
+        options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
@@ -50,4 +50,3 @@ jobs:
         run: python manage.py test
         env:
           DATABASE_URL: postgres://postgres:Baxuta777@localhost:5432/postgres
-
